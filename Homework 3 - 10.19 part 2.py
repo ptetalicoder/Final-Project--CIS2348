@@ -15,37 +15,33 @@ class ItemToPurchase:
 
 class ShoppingCart:
 
-    # constructor to initialize the shopping cart
+    # shopping cart
     def __init__(self, customer_name='none', current_date='January 1, 2016', cart_items=[]):
         self.customer_name = customer_name
         self.current_date = current_date
         self.cart_items = cart_items
 
-        # method to add an item to the shopping cart
-
     def add_item(self, itemToPurchase):
         self.cart_items.append(itemToPurchase)
 
-        # method to remove an item from the shopping cart
+        #remove an item from the shopping cart
 
     def remove_item(self, itemName):
 
         tremove_item = False
-        # loop to find the item in the cart
         for item in self.cart_items:
             if item.item_name == itemName:
                 self.cart_items.remove(item)
                 tremove_item = True
                 break
-        # item not found
         if not tremove_item:
             print('Item not found in the cart. Nothing removed')
 
-    # method to modify an item's quantity in the shopping cart
+    #modify an item's quantity in shopping cart
     def modify_item(self, itemToPurchase):
 
         tmodify_item = False
-        # loop to find an item
+      
         for i in range(len(self.cart_items)):
 
             if self.cart_items[i].item_name == itemToPurchase.item_name:
@@ -53,11 +49,11 @@ class ShoppingCart:
                 self.cart_items[i].item_quantity = itemToPurchase.item_quantity
                 break
 
-        # item not found
+       
         if not tmodify_item:
             print('Item not found in the cart. Nothing modified')
 
-            # method to return the total quantity of all items in the shopping cart
+            #total quantity of all items in the shopping cart
 
     def get_num_items_in_cart(self):
         num_items = 0
@@ -65,7 +61,7 @@ class ShoppingCart:
             num_items = num_items + item.item_quantity
         return num_items
 
-    # method to return the total cost of all items in the shopping cart
+    #total cost of all items in the shopping cart
     def get_cost_of_cart(self):
         total_cost = 0
         cost = 0
@@ -74,7 +70,7 @@ class ShoppingCart:
             total_cost += cost
         return total_cost
 
-    # method to print the total cost of the cart
+    #total cost of the cart
     def print_total(self):
         total_cost = self.get_cost_of_cart()
         if (total_cost == 0):
@@ -88,7 +84,7 @@ class ShoppingCart:
 
             print('\nTotal: $%d' % (total_cost))
 
-    # method to print the item's description
+    #item's description
     def print_descriptions(self):
         if len(self.cart_items) == 0:
             print('SHOPPING CART IS EMPTY')
@@ -97,8 +93,6 @@ class ShoppingCart:
             print('\nItem Descriptions')
             for item in self.cart_items:
                 item.print_item_description()
-
-            # method to display the menu options and based on user's choice perform the operation
 
 
 def print_menu(newCart):
