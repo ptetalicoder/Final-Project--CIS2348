@@ -2,14 +2,16 @@
 #ID 1541822
 #Homework 3 11.27
 
+
+# Provided all parts into one 
 team_dict={}
 #index of dictionary
 i=1
 #count
 count=1
-#used for-loop to repeat input 6 times
+# I used for-loop to repeat input 6 times
 for i in range(1,6):
-    #jersy number and rating
+    # Provides jersy number and rating
     jersey_number = int(input('Enter player {}\'s jersey number:\n' .format(i)))
     rating = int(input('Enter player {}\'s rating:\n' .format(i)))
     print()
