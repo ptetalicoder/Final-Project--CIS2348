@@ -3,7 +3,6 @@
 #Homework 3 10.17
 
 class ItemToPurchase:
-    # constructor
     # EX #1
     def __init__(self):
         # variables
@@ -20,17 +19,17 @@ class ItemToPurchase:
 
 if __name__ == "__main__":
     # Ex #2
-    # the main function
-    # it should print the item1 depending on item
+    # This is the main function
+    # It should print the item1 depending on item given
     print("Item 1")
     item1 = ItemToPurchase()
     item2 = ItemToPurchase()
-    # prompt and Read item1 details from the user
+    # it should prompt and read the item1 details from the user
     item1.item_name = input('Enter the item name:\n')
     item1.item_price = int(input('Enter the item price:\n'))
     item1.item_quantity = int(input('Enter the item quantity:\n'))
     print("\nItem 2")
-    # it should prompt the user and Read the item2 details
+    # it should prompt the user and read the item2 details from the user
     item2.item_name = input('Enter the item name:\n')
     item2.item_price = int(input('Enter the item price:\n'))
     item2.item_quantity = int(input('Enter the item quantity:\n'))
